@@ -40,4 +40,3 @@ export default class UsuarioController {
     return undefined; // Retorna undefined se não encontrar nenhum usuário com o código especificado
   }
 }
-

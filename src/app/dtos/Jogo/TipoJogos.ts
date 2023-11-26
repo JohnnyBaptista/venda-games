@@ -1,19 +1,19 @@
-import Desenvolvedora from "./Desenvolvedora";
 import Jogo from "./Jogo";
 
 class Acao extends Jogo {
-  constructor(
-    codigo: number,
-    nome: string,
-    descricao: string,
-    desenvolvedora: Desenvolvedora,
-    dataLancamento: Date,
-    valor: number,
-    requisitosMinimos: string,
-    avaliacao: number,
-    comentarios: string,
-    disponivel: boolean
-  ) {
+  constructor(dados: Jogo) {
+    const {
+      codigo,
+      nome,
+      descricao,
+      desenvolvedora,
+      dataLancamento,
+      valor,
+      requisitosMinimos,
+      avaliacao,
+      comentarios,
+      disponivel,
+    } = dados;
     super(
       codigo,
       nome,
@@ -38,18 +38,19 @@ class Acao extends Jogo {
 }
 
 class Aventura extends Jogo {
-  constructor(
-    codigo: number,
-    nome: string,
-    descricao: string,
-    desenvolvedora: Desenvolvedora,
-    dataLancamento: Date,
-    valor: number,
-    requisitosMinimos: string,
-    avaliacao: number,
-    comentarios: string,
-    disponivel: boolean
-  ) {
+  constructor(dados: Jogo) {
+    const {
+      codigo,
+      nome,
+      descricao,
+      desenvolvedora,
+      dataLancamento,
+      valor,
+      requisitosMinimos,
+      avaliacao,
+      comentarios,
+      disponivel,
+    } = dados;
     super(
       codigo,
       nome,
@@ -74,18 +75,19 @@ class Aventura extends Jogo {
 }
 
 class RPG extends Jogo {
-  constructor(
-    codigo: number,
-    nome: string,
-    descricao: string,
-    desenvolvedora: Desenvolvedora,
-    dataLancamento: Date,
-    valor: number,
-    requisitosMinimos: string,
-    avaliacao: number,
-    comentarios: string,
-    disponivel: boolean
-  ) {
+  constructor(dados: Jogo) {
+    const {
+      codigo,
+      nome,
+      descricao,
+      desenvolvedora,
+      dataLancamento,
+      valor,
+      requisitosMinimos,
+      avaliacao,
+      comentarios,
+      disponivel,
+    } = dados;
     super(
       codigo,
       nome,
@@ -110,18 +112,19 @@ class RPG extends Jogo {
 }
 
 class Esporte extends Jogo {
-  constructor(
-    codigo: number,
-    nome: string,
-    descricao: string,
-    desenvolvedora: Desenvolvedora,
-    dataLancamento: Date,
-    valor: number,
-    requisitosMinimos: string,
-    avaliacao: number,
-    comentarios: string,
-    disponivel: boolean
-  ) {
+  constructor(dados: Jogo) {
+    const {
+      codigo,
+      nome,
+      descricao,
+      desenvolvedora,
+      dataLancamento,
+      valor,
+      requisitosMinimos,
+      avaliacao,
+      comentarios,
+      disponivel,
+    } = dados;
     super(
       codigo,
       nome,
@@ -146,18 +149,19 @@ class Esporte extends Jogo {
 }
 
 class Corrida extends Jogo {
-  constructor(
-    codigo: number,
-    nome: string,
-    descricao: string,
-    desenvolvedora: Desenvolvedora,
-    dataLancamento: Date,
-    valor: number,
-    requisitosMinimos: string,
-    avaliacao: number,
-    comentarios: string,
-    disponivel: boolean
-  ) {
+  constructor(dados: Jogo) {
+    const {
+      codigo,
+      nome,
+      descricao,
+      desenvolvedora,
+      dataLancamento,
+      valor,
+      requisitosMinimos,
+      avaliacao,
+      comentarios,
+      disponivel,
+    } = dados;
     super(
       codigo,
       nome,
