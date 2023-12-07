@@ -40,7 +40,7 @@ export type MainAppContextData = {
 export const MainAppContext = createContext({} as MainAppContextData);
 
 export default function MainAppContextProvider({ children }: PropsWithChildren) {
-    const sistemaJogos = new SistemaDeJogosEletronicos({ clientes: [], gerentes: [], jogos: [], nomePlataforma: 'Venda games top' })
+    const sistemaJogos = new SistemaDeJogosEletronicos("Venda games")
     const { clientes, gerentes } = sistemaJogos;
     console.log({clientes, gerentes})
    
