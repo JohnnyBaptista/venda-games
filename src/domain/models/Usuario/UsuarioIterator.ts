@@ -1,12 +1,12 @@
 import Usuario from "../../../app/dtos/User/Usuario";
-import { IUsuarioIterator } from "../../repositories/interfaces/IUsuario";
-
-export default class UsuarioIterator implements IUsuarioIterator {
+import { Iterator } from "../../repositories/interfaces/Iterator";
+export default class UsuarioIterator implements Iterator<Usuario> {
   private index = 0;
   private usuarios: Usuario[];
 
   constructor(usuarios: Usuario[]) {
     this.usuarios = usuarios;
+    console.log(this.usuarios);
   }
 
   hasNext(): boolean {
@@ -14,7 +14,10 @@ export default class UsuarioIterator implements IUsuarioIterator {
   }
 
   next(): Usuario {
-    this.index = this.index + 1;
-    return this.usuarios[this.index];
+    return this.usuarios[this.index++];
+  }
+
+  update(usuarios: Usuario[]){
+    this.usuarios = usuarios;
   }
 }

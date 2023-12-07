@@ -5,7 +5,6 @@ export default class Usuario {
   protected _nome: string;
   protected _cpf: string;
   protected _rg: string;
-  protected _dataNascimento: Date;
   protected _endereco: string;
   protected _cep: string;
   protected _email: string;
@@ -17,7 +16,6 @@ export default class Usuario {
     this._nome = user.nome;
     this._cpf = user.cpf;
     this._rg = user.rg;
-    this._dataNascimento = user.dataNascimento;
     this._endereco = user.endereco;
     this._cep = user.cep;
     this._email = user.email;
@@ -39,9 +37,6 @@ export default class Usuario {
     return this._rg;
   }
 
-  get dataNascimento(): Date {
-    return this._dataNascimento;
-  }
 
   get endereco(): string {
     return this._endereco;
@@ -69,10 +64,6 @@ export default class Usuario {
 
   set rg(value: string) {
     this._rg = value;
-  }
-
-  set dataNascimento(value: Date) {
-    this._dataNascimento = value;
   }
 
   set endereco(value: string) {

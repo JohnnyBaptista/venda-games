@@ -7,7 +7,6 @@ interface IUsuario {
   nome: string;
   cpf: string;
   rg: string;
-  dataNascimento: Date;
   endereco: string;
   cep: string;
   email: string;

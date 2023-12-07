@@ -8,7 +8,7 @@ import UsuarioFactory from "../../factory/Usuario/UsuarioFactory";
 export default class UsuarioController {
   constructor(
     private usuarioIterator: UsuarioIterator,
-    private usuarioFactory: UsuarioFactory
+    private usuarioFactory: UsuarioFactory,
   ) {
     this.usuarioIterator = usuarioIterator;
     this.usuarioFactory = usuarioFactory;
@@ -23,6 +23,10 @@ export default class UsuarioController {
     return usuarios;
   }
 
+  public uptadeUsuarios(usuarios: Usuario[]): void {
+    this.usuarioIterator.update(usuarios);
+  }
+
   public criarNovoUsuario(
     tipo: TipoUsuario,
     dados: ICliente | IGerente
@@ -30,13 +34,13 @@ export default class UsuarioController {
     return this.usuarioFactory.criarUsuario(tipo, dados);
   }
 
-  getUsuarioByCodigo(codigo: number): Usuario | undefined {
+    getUsuarioByEmail(email: string): Usuario | undefined {
     while (this.usuarioIterator.hasNext()) {
       const usuario = this.usuarioIterator.next();
-      if (usuario.codigo === codigo) {
+      if (usuario.email === email) {
         return usuario;
       }
     }
-    return undefined; // Retorna undefined se não encontrar nenhum usuário com o código especificado
+    return undefined;
   }
 }
